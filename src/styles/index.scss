@@ -1,0 +1,162 @@
+@import 'modal';
+
+
+
+.banner {
+  height: 638px;
+}
+
+.vert-border {
+  margin: 0 80px;
+  background: rgba(256, 256, 256, 0.1);
+  width: 1px;
+}
+
+.horz-border {
+  margin: 24px 0;
+  background: rgba(256, 256, 256, 0.1);
+  height: 1px;
+  width: 100%;
+}
+
+
+.feedback {
+  display: flex;
+  flex-wrap: wrap;
+  padding-right: 32px;
+
+  .quest {
+    .main-text {
+      font-size: 20px !important;
+    }
+
+    .sub-text {
+      font-size: 16px !important;
+    }
+
+    .star-wrapper {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      width: 320px;
+
+      .stars {
+        margin-top: 24px;
+
+        .star-item {
+          cursor: pointer;
+          margin: 8px
+        }
+      }
+
+      .score {
+        color: #FFFFFF66;
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .hashtags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    margin-left: -4px;
+    width: 478px;
+
+    .chip {
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 34px;
+      padding: 4px 16px;
+      margin: 4px;
+      font-size: 14px;
+      cursor: pointer;
+
+      .text {
+        font-weight: 500;
+        color: rgba(256, 256, 256, 0.4)
+      }
+
+      .freq {
+        font-weight: 600;
+        color: rgba(256, 256, 256, 0.6)
+      }
+
+      &:hover {
+        border: 1px solid #6435E9;
+      }
+
+      &.active {
+        background-color: #6435E9;
+
+        .text,
+        .freq {
+          color: rgba(256, 256, 256, 0.8)
+        }
+      }
+    }
+  }
+
+  .review {
+    width: 100%;
+
+    textarea {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      height: 94px;
+      width: calc(100% - 27px);
+      margin-top: 24px;
+      border: rgba(255, 255, 255, 0.1) 0.5px solid;
+      resize: none;
+      padding: 13px;
+
+      &::placeholder {
+        color: rgba(256, 256, 256, 0.2);
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      &:focus-visible {
+        outline: 1px solid rgba(255, 255, 255, 0.1)
+      }
+
+    }
+  }
+
+  .submit {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    background: #6435E9;
+    margin-top: 20px;
+
+    &:hover {
+      outline: 1px solid -webkit-focus-ring-color;
+    }
+
+    &.disabled {
+      opacity: 0.8;
+    }
+
+  }
+}
+
+
+.main-text {
+  color: #fff;
+  font-size: 16px;
+}
+
+.sub-text {
+  color: rgba(256, 256, 256, 0.6);
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.chip {
+  border: 1px solid rgba(256, 256, 256, 0.4);
+  border-radius: 50%;
+}
