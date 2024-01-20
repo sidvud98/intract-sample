@@ -1,8 +1,21 @@
-# React + Vite
+This project has been created as a part of interview assessment for intract
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Deployed: https://intract-sample.vercel.app/
 
-Currently, two official plugins are available:
+This application has been created by Sai Siddharth Vudikavalasa
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+contact:
+
+sidvud98@gmail.com
++91 9704-99-2011
+https://github.com/sidvud98
+https://www.linkedin.com/in/sid98iitkgp/
+
+
+
+
+# Running instructions
+
+2) Run `npm install`
+
+3) Run `npm run dev`
