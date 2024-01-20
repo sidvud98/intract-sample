@@ -12,7 +12,6 @@ export default function ModalComp({ modalIsOpen, closeModal }) {
   useEffect(() => {
 
     return () => {
-      console.log("cleaningup")
       dispatch(actions.resetAll());
     }
   }, [modalIsOpen])
@@ -25,7 +24,9 @@ export default function ModalComp({ modalIsOpen, closeModal }) {
         className="modal-content"
         overlayClassName="modal-overlay"
       >
-        <img src={svgImg} alt="banner-img" className='banner' />
+        <div className='banner-wrapper'>
+          <img src={svgImg} alt="banner-img" className='banner' />
+        </div>
         <div className="vert-border" />
         <Feedback closeModal={closeModal} />
       </ReactModal>

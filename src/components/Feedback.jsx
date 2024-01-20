@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Stars from './Stars'
 import Hashtags from './Hashtags'
 import { useDispatch, useSelector } from 'react-redux'
@@ -10,6 +10,18 @@ export default function Feedback({ closeModal }) {
   const handleInput = (e) => {
     dispatch(actions.setReview(e.target.value))
   }
+  const handleClose = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      alert('Submitted Successfully');
+      closeModal();
+    }, 2000);
+  }
+
+  const [loading, setLoading] = useState(false)
+
+
   return (
     <div className="feedback">
       <div className='quest'>
@@ -34,7 +46,7 @@ export default function Feedback({ closeModal }) {
         <div className="sub-text">Tell us more about the experience, your opinion matters</div>
         <textarea type="text" placeholder='Write a review' onChange={handleInput} />
       </div>
-      <button className="submit" disabled={score === 0} onClick={closeModal}>Submit Rating</button>
+      <button className="submit" disabled={score === 0 || loading} onClick={handleClose}>{loading ? 'Submitting...' : 'Submit Rating'}</button>
     </div>
   )
 }

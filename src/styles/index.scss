@@ -1,9 +1,13 @@
 @import 'modal';
 
 
+.banner-wrapper {
+  min-width: 570px;
+  min-height: 644px;
 
-.banner {
-  height: 638px;
+  .banner {
+    height: 638px;
+  }
 }
 
 .vert-border {
